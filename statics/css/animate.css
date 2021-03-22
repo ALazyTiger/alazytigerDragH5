@@ -1,0 +1,384 @@
+
+/*========== 公共样式 开始==========*/
+html,
+body {
+  height: 100%;
+}
+*{
+  box-sizing: border-box;
+}
+a{
+      color: #fff;
+      text-decoration: none;
+}
+html,
+body,
+div,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+input,
+select,
+button,
+textarea,
+iframe,
+table,
+th,
+td {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Microsoft YaHei";
+}
+
+img {
+  border: 0 none;
+  vertical-align: top;
+}
+
+ul,
+li,
+dl,
+dd,
+dt {
+  list-style-type: none;
+}
+
+i,
+em,
+cite {
+  font-style: normal;
+}
+
+/*========== 公共样式 结束==========*/
+/*========== 登录页流星 开始 ==========*/
+#stars {
+  margin: 0 auto;
+  max-width: 1600px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+.star {
+  display: block;
+  width: 1px;
+  background: transparent;
+  position: relative;
+  opacity: 0;
+  /*过渡动画*/
+  
+  animation: star-fall 3s linear infinite;
+  -webkit-animation: star-fall 3s linear infinite;
+  -moz-animation: star-fall 3s linear infinite;
+}
+.star:after {
+  content: '';
+  display: block;
+  border: 0px solid #fff;
+  border-width: 0px 90px 2px 90px;
+  border-color: transparent transparent transparent rgba(255, 255, 255, .5);
+  box-shadow: 0 0 1px 0 rgba(255, 255, 255, .1);
+  /*变形*/
+  
+  transform: rotate(-45deg) translate3d(1px, 3px, 0);
+  -webkit-transform: rotate(-45deg) translate3d(1px, 3px, 0);
+  -moz-transform: rotate(-45deg) translate3d(1px, 3px, 0);
+  transform-origin: 0% 100%;
+  -webkit-transform-origin: 0% 100%;
+  -moz-transform-origin: 0% 100%;
+}
+@keyframes star-fall {
+  0% {
+      opacity: 0;
+      transform: scale(0.5) translate3d(0, 0, 0);
+      -webkit-transform: scale(0.5) translate3d(0, 0, 0);
+      -moz-transform: scale(0.5) translate3d(0, 0, 0);
+  }
+  50% {
+      opacity: 1;
+      transform: translate3d(-200px, 200px, 0);
+      -webkit-transform: translate3d(-200px, 200px, 0);
+      -moz-transform: translate3d(-200px, 200px, 0);
+  }
+  100% {
+      opacity: 0;
+      transform: scale(1.2) translate3d(-300px, 300px, 0);
+      -webkit-transform: scale(1.2) translate3d(-300px, 300px, 0);
+      -moz-transform: scale(1.2) translate3d(-300px, 300px, 0);
+  }
+}
+/*========== 登录页流星 结束 ==========*/
+@-webkit-keyframes stamp {
+
+  from {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(5);
+    transition: all 0.3s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  }
+
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes stamp {
+
+  from {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(5);
+    transition: all 0.3s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.stamp {
+  -webkit-animation-name: stamp;
+  animation-name: stamp;
+  animation-duration: 0.4s;
+}
+
+@-webkit-keyframes bounceIndevil {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, -100%, 0);
+    transform: translate3d(100%, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounceIndevil {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, -100%, 0);
+    transform: translate3d(100%, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.bounceIndevil {
+  -webkit-animation-name: bounceIndevil;
+  animation-name: bounceIndevil;
+  animation-duration: 0.8s;
+}
+
+@-webkit-keyframes bounceInshooter {
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, -100%, 0);
+    transform: translate3d(-100%, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounceInshooter {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, -100%, 0);
+    transform: translate3d(-100%, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.bounceInshooter {
+  -webkit-animation-name: bounceInshooter;
+  animation-name: bounceInshooter;
+  animation-duration: 0.8s;
+}
+/*左右马*/
+@-webkit-keyframes bounceInLeftBig {
+
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-3000px, 0, 0) scaleX(3);
+    transform: translate3d(-3000px, 0, 0) scaleX(3);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: translate3d(1.2rem, 0, 0) scaleX(1);
+    transform: translate3d(1.2rem, 0, 0) scaleX(1);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounceInLeftBig {
+
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-3000px, 0, 0) scaleX(3);
+    transform: translate3d(-3000px, 0, 0) scaleX(3);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: translate3d(1.2rem, 0, 0) scaleX(1);
+    transform: translate3d(1.2rem, 0, 0) scaleX(1);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.bounceInLeftBig {
+  -webkit-animation-name: bounceInLeftBig;
+  animation-name: bounceInLeftBig;
+  animation-duration: 0.8s;
+}
+
+@-webkit-keyframes bounceInRightBig {
+
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(3000px, 0, 0) scaleX(1);
+    transform: translate3d(3000px, 0, 0) scaleX(1);
+  }
+
+  50% {
+    -webkit-transform: translate3d(-1.2rem, 0, 0) scaleX(1);
+    transform: translate3d(-1.2rem, 0, 0) scaleX(1);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0) scaleX(1);
+    transform: translate3d(0, 0, 0) scaleX(1);
+  }
+}
+
+@keyframes bounceInRightBig {
+
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(3000px, 0, 0) scaleX(1);
+    transform: translate3d(3000px, 0, 0) scaleX(1);
+  }
+
+  50% {
+    -webkit-transform: translate3d(-1.2rem, 0, 0) scaleX(1);
+    transform: translate3d(-1.2rem, 0, 0) scaleX(1);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0) scaleX(1);
+    transform: translate3d(0, 0, 0) scaleX(1);
+  }
+}
+
+.bounceInRightBig {
+  -webkit-animation-name: bounceInRightBig;
+  animation-name: bounceInRightBig;
+  animation-duration: 0.8s;
+}
+/**/
+
+@-webkit-keyframes videobtnPlay {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+
+  100% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3)
+  }
+}
+
+@keyframes videobtnPlay {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+
+  100% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3)
+  }
+}
+.play{
+   animation: rotate 1.5s linear infinite;
+   animation-delay: 3.3s;
+}
