@@ -6,7 +6,9 @@
       （vue-animate-fullpage 插件 请移步 文章：https://www.cnblogs.com/luobiao/p/13292205.html）
 
 有哪些功能？
+
       目前只能设置背景图片、插入图片、文本（文本设置字号、颜色）等，二期以后会逐步增加更多的功能。
 
 有哪些动画效果？
+
       目前采用的是开源的animate.css的动画库。
